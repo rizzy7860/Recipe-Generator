@@ -1,5 +1,6 @@
 // SECTION: Import Statements
-import SearchInput from "@/components/SearchInput/SearchInput";
+import RecipeSelector from "@/components/RecipeSelector/RecipeSelector";
+// import SearchInput from "@/components/SearchInput/SearchInput";
 import {
   IRecipeIngredients,
   IRecipeIngredientsResponse,
@@ -33,8 +34,8 @@ export default async function Home() {
   //
   return (
     <div className="h-screen w-screen flex items-center justify-center">
-      {/* Search Input */}
-      <SearchInput />
+      {/* 💬: Parent to the SearchInput and MealResults components created for the purposes of lifting state */}
+      <RecipeSelector ingredients={ingredients} />
     </div>
   );
 }

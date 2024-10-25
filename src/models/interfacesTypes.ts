@@ -10,9 +10,5 @@ export interface IRecipeIngredientsResponse {
   meals: IRecipeIngredients[];
 }
 
-export interface ISearch {
-  searchParam: string;
-}
-
 // SECTION: Types
 export type IconType = React.ReactNode;

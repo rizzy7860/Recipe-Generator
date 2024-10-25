@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Style specific input clear cancel button */
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
