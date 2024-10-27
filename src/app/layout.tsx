@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "../styles/globals.css";
+import Header from "@/components/Header/Header";
+import SideNav from "@/components/SideNav/SideNav";
 
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
@@ -17,7 +19,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${jakarta.className} antialiased`}>{children}</body>
+      <body className={`${jakarta.className} antialiased`}>
+        <Header />
+        <div className="flex">
+          <SideNav />
+          <div className="w-full overflow-x-auto">
+            <div className="sm:h-[calc(99vh-60px)] overflow-auto ">
+              <div className="w-full flex justify-center mx-auto   overflow-auto h-[calc(100vh - 120px)] overflow-y-auto relative">
+                <div className="w-full">{children}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
