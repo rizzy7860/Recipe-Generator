@@ -1,12 +1,11 @@
 export default function SideNav(): React.ReactNode {
   return (
     <div className="h-screen w-fit flex bg-gray-200 border-r border-gray-100">
-      {/* <!-- container --> */}
+      {/* Container */}
       <aside className="flex flex-col items-center bg-white text-gray-700 shadow h-full">
-        {/* <!-- Side Nav Bar--> */}
         <ul>
-          {/* <!-- Items Section --> */}
-          <li className="hover:bg-gray-100">
+          {/* Navigation Item 1 */}
+          <li className="hover:bg-blue-100">
             <a
               href="."
               className="h-16 px-6 flex justify-center items-center w-full
@@ -33,8 +32,8 @@ export default function SideNav(): React.ReactNode {
               </svg>
             </a>
           </li>
-
-          <li className="hover:bg-gray-100">
+          {/* Navigation Item 2 */}
+          <li className="hover:bg-blue-100">
             <a
               href="."
               className="h-16 px-6 flex justify-center items-center w-full
@@ -56,8 +55,8 @@ export default function SideNav(): React.ReactNode {
               </svg>
             </a>
           </li>
-
-          <li className="hover:bg-gray-100">
+          {/* Navigation Item 3 */}
+          <li className="hover:bg-blue-100">
             <a
               href="."
               className="h-16 px-6 flex justify-center items-center w-full
@@ -83,8 +82,8 @@ export default function SideNav(): React.ReactNode {
               </svg>
             </a>
           </li>
-
-          <li className="hover:bg-gray-100">
+          {/* Navigation Item 4 */}
+          <li className="hover:bg-blue-100">
             <a
               href="."
               className="h-16 px-6 flex justify-center items-center w-full
@@ -111,8 +110,8 @@ export default function SideNav(): React.ReactNode {
               </svg>
             </a>
           </li>
-
-          <li className="hover:bg-gray-100">
+          {/* Navigation Item 5 */}
+          <li className="hover:bg-blue-100">
             <a
               href="."
               className="h-16 px-6 flex justify-center items-center w-full
@@ -151,8 +150,8 @@ export default function SideNav(): React.ReactNode {
               </svg>
             </a>
           </li>
-
-          <li className="hover:bg-gray-100">
+          {/* Navigation Item 6 */}
+          <li className="hover:bg-blue-100">
             <a
               href="."
               className="h-16 px-6 flex justify-center items-center w-full
@@ -176,31 +175,6 @@ export default function SideNav(): React.ReactNode {
             </a>
           </li>
         </ul>
-
-        <div className="mt-auto h-16 flex items-center w-full">
-          {/* <!-- Action Section --> */}
-          <button
-            className="h-16 mx-auto flex justify-center items-center
-				w-full focus:text-orange-500 hover:bg-red-200 focus:outline-none"
-          >
-            <svg
-              className="h-5 w-5 text-red-700"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-              <polyline points="16 17 21 12 16 7"></polyline>
-              <line x1="21" y1="12" x2="9" y2="12"></line>
-            </svg>
-          </button>
-        </div>
       </aside>
     </div>
   );

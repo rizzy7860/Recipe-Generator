@@ -49,7 +49,7 @@ export default function SearchInput({
         type="search"
         value={searchText}
         onChange={handleInputChange}
-        className="border-[1px] w-full border-[#98A2B3] flex items-center justify-center placeholder:text-[#98A2B3] pr-12 p-3 placeholder:text-sm rounded-md focus:outline-none focus:ring-offset-2 focus:ring-blue-300 focus:ring-1 h-10 capitalize"
+        className="border-[1px] w-full border-[#98A2B3] flex items-center justify-center placeholder:text-[#98A2B3] pr-12 p-3 placeholder:text-sm rounded-md focus:outline-none focus:ring-blue-300 focus:ring-1 h-10 capitalize"
       />
       {/* Search Button */}
       <button className="absolute bottom-0 right-0 h-full px-2.5 rounded-r-md bg-blue-400 group-focus-within:bg-blue-600 transition-all ease-in duration-400">
