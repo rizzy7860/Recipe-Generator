@@ -5,7 +5,6 @@ import {
   IRecipeIngredients,
   IRecipeIngredientsResponse,
 } from "@/models/interfacesTypes";
-import Image from "next/image";
 
 // SECTION: Async Operations
 async function getAllIngredients(): Promise<IRecipeIngredients[]> {
