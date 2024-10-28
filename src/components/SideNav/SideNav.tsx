@@ -9,7 +9,7 @@ import {
 
 export default function SideNav(): React.ReactNode {
   return (
-    <div className="h-screen w-fit flex bg-gray-200 border-r border-gray-100">
+    <div className="h-screen w-fit flex border-r border-gray-100">
       {/* Container */}
       <aside className="flex flex-col items-center bg-white text-gray-700 shadow h-full">
         <ul>

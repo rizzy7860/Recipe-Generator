@@ -59,7 +59,7 @@ export default function RecipeFilter({
               <a
                 key={index}
                 href="#"
-                className="flex flex-col text-sm p-1 py-2 text-gray-700 hover:bg-sky-100 cursor-pointer rounded-md"
+                className="flex flex-col text-sm p-1 py-2 text-gray-700 hover:bg-indigo-50 cursor-pointer rounded-md"
               >
                 {item}
               </a>
