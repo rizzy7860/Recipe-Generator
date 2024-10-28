@@ -20,9 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${jakarta.className} antialiased`}>
+        {/* Header */}
         <Header />
         <div className="flex">
-          <SideNav />
+          {/* Side Navigation */}
+          <div className="hidden md:block">
+            <SideNav />
+          </div>
           <div className="w-full overflow-x-auto">
             <div className="sm:h-[calc(99vh-60px)] overflow-auto ">
               <div className="w-full flex justify-center mx-auto   overflow-auto h-[calc(100vh - 120px)] overflow-y-auto relative">

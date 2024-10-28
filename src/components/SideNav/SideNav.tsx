@@ -1,3 +1,12 @@
+import {
+  cookieIcon,
+  cookingPotIcon,
+  dashboardIcon,
+  foodBowlIcon,
+  heartbeatIcon,
+  reicpeBookIcon,
+} from "@/icons/icons";
+
 export default function SideNav(): React.ReactNode {
   return (
     <div className="h-screen w-fit flex bg-gray-200 border-r border-gray-100">
@@ -5,173 +14,57 @@ export default function SideNav(): React.ReactNode {
       <aside className="flex flex-col items-center bg-white text-gray-700 shadow h-full">
         <ul>
           {/* Navigation Item 1 */}
-          <li className="hover:bg-blue-100">
+          <li className="hover:bg-blue-100 transition-all duration-800 ease-in-out">
             <a
               href="."
-              className="h-16 px-6 flex justify-center items-center w-full
-					focus:text-orange-500"
+              className="h-16 px-6 flex justify-center items-center w-full"
             >
-              <svg
-                className="h-5 w-5"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
-                <path
-                  d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0
-							2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0
-							0-1.79 1.11z"
-                ></path>
-              </svg>
+              <span className="h-5 w-5">{dashboardIcon}</span>
             </a>
           </li>
           {/* Navigation Item 2 */}
-          <li className="hover:bg-blue-100">
+          <li className="hover:bg-blue-100 transition-all duration-800 ease-in-out">
             <a
               href="."
-              className="h-16 px-6 flex justify-center items-center w-full
-					focus:text-orange-500"
+              className="h-16 px-6 flex justify-center items-center w-full"
             >
-              <svg
-                className="h-5 w-5"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-              </svg>
+              <span className="h-5 w-5">{cookingPotIcon}</span>
             </a>
           </li>
           {/* Navigation Item 3 */}
-          <li className="hover:bg-blue-100">
+          <li className="hover:bg-blue-100 transition-all duration-800 ease-in-out">
             <a
               href="."
-              className="h-16 px-6 flex justify-center items-center w-full
-					focus:text-orange-500"
+              className="h-16 px-6 flex justify-center items-center w-full"
             >
-              <svg
-                className="h-5 w-5"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <polyline points="3 6 5 6 21 6"></polyline>
-                <path
-                  d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2
-							0 0 1 2-2h4a2 2 0 0 1 2 2v2"
-                ></path>
-              </svg>
+              <span className="h-6 w-6">{cookieIcon}</span>
             </a>
           </li>
           {/* Navigation Item 4 */}
-          <li className="hover:bg-blue-100">
+          <li className="hover:bg-blue-100 transition-all duration-800 ease-in-out">
             <a
               href="."
-              className="h-16 px-6 flex justify-center items-center w-full
-					focus:text-orange-500"
+              className="h-16 px-6 flex justify-center items-center w-full"
             >
-              <svg
-                className="h-5 w-5"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx="9" cy="21" r="1"></circle>
-                <circle cx="20" cy="21" r="1"></circle>
-                <path
-                  d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0
-							2-1.61L23 6H6"
-                ></path>
-              </svg>
+              <span className="h-5 w-5">{reicpeBookIcon}</span>
             </a>
           </li>
           {/* Navigation Item 5 */}
-          <li className="hover:bg-blue-100">
+          <li className="hover:bg-blue-100 transition-all duration-800 ease-in-out">
             <a
               href="."
-              className="h-16 px-6 flex justify-center items-center w-full
-					focus:text-orange-500"
+              className="h-16 px-6 flex justify-center items-center w-full"
             >
-              <svg
-                className="h-5 w-5"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx="12" cy="12" r="3"></circle>
-                <path
-                  d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1
-							0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0
-							0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2
-							2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0
-							0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1
-							0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0
-							0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65
-							0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0
-							1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0
-							1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2
-							0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0
-							1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0
-							2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0
-							0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65
-							1.65 0 0 0-1.51 1z"
-                ></path>
-              </svg>
+              <span className="h-6 w-6">{foodBowlIcon}</span>
             </a>
           </li>
           {/* Navigation Item 6 */}
-          <li className="hover:bg-blue-100">
+          <li className="hover:bg-blue-100 transition-all duration-800 ease-in-out">
             <a
               href="."
-              className="h-16 px-6 flex justify-center items-center w-full
-					focus:text-orange-500"
+              className="h-16 px-6 flex justify-center items-center w-full"
             >
-              <svg
-                className="h-5 w-5"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-              </svg>
+              <span className="h-6 w-6">{heartbeatIcon}</span>
             </a>
           </li>
         </ul>

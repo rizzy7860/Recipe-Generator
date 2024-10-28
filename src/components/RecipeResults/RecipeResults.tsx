@@ -76,7 +76,9 @@ export default function RecipeResults({ selectedIngredient }: IRecipeResults) {
           ))}
         </div>
       ) : (
-        <p>No meals found for this ingredient.</p>
+        <p className="text-sm text-gray-700">
+          There were no recipes were found, please try another ingredient.
+        </p>
       )}
     </div>
   );

@@ -50,7 +50,9 @@ export default async function Home() {
         </div>
       </div>
       {/* 💬: Full Recipe Display */}
-      <FullRecipe />
+      <div className="col-span-3 col-start-3 lg:border-l lg:border-gray-200">
+        <FullRecipe />
+      </div>
     </div>
   );
 }
