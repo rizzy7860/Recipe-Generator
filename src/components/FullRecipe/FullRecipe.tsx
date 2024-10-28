@@ -14,7 +14,7 @@ export default function FullRecipe(): React.ReactNode {
         />
         <p className="text-gray-400 max-w-80 text-center text-sm leading-relaxed">
           Once you have searched for a recipe in the left-hand panel, select it
-          view it here in greater detail
+          view it to view it here in greater detail
         </p>
       </div>
     </div>
