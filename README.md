@@ -6,4 +6,4 @@ The application - entitled _ResCulina_ - is a recipe generator built for the tec
 
 It leverages TheMealDB API to fetch recipe data and present suitable cooking options.
 
-### Section 1 - Application Requirements & Analysis
+### Section 1 -
