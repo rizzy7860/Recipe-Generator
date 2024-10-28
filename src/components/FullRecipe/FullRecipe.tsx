@@ -13,7 +13,7 @@ export default function FullRecipe(): React.ReactNode {
           priority={true}
         />
         <p className="text-gray-400 max-w-80 text-center text-sm leading-relaxed">
-          Once you've searched for a recipe in the left-hand panel, select it
+          Once you have searched for a recipe in the left-hand panel, select it
           view it here in greater detail
         </p>
       </div>
