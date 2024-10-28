@@ -28,7 +28,7 @@ These API constraints informed the direction of the UI design and interaction st
 
 For the user interface, I relied on my design experience and intuition to create a layout that balances simplicity with functionality. The initial concept envisions ResCulina as a web app where users can explore recipes, learn about ingredient properties, and generate custom recipes in an accessible portal.
 
-![Rough Mockup of ResCulina](https://ibb.co/1nS5qVL)
+![Rough Mockup of ResCulina](https://i.ibb.co/DbqyCXt/mockup.png)
 
 Given the scope of this audition, I prioritised a streamlined user experience, reducing the complexity of options to essential features. The approach I went for was to:
 
