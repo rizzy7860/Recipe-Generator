@@ -44,7 +44,7 @@ export default function SearchInput({
   return (
     <div className="flex flex-col relative w-full z-40">
       <div className="relative w-full">
-        {/* Search Input */}
+        {/* 💬: Search Input */}
         <input
           placeholder="Search for recipes by main ingredient"
           type="search"
@@ -52,7 +52,7 @@ export default function SearchInput({
           onChange={handleInputChange}
           className="border-[1px] w-full border-[#98A2B3] pl-10 placeholder:text-[#98A2B3] p-3 placeholder:text-sm rounded-md focus:outline-none focus:ring-blue-300 focus:ring-1 h-10"
         />
-        {/* Search icon positioned absolutely inside the input */}
+        {/* 💬: Search icon */}
         <span className="absolute left-2 top-1/2 transform -translate-y-1/2 flex items-center justify-center h-5 w-5 text-[#98A2B3]">
           {searchIcon}
         </span>
@@ -66,7 +66,7 @@ export default function SearchInput({
               <li
                 key={ingredient.idIngredient}
                 className="p-2 hover:bg-blue-100 cursor-pointer"
-                onClick={() => handleSelectIngredient(ingredient)} // Select ingredient
+                onClick={() => handleSelectIngredient(ingredient)}
               >
                 {ingredient.strIngredient}
               </li>

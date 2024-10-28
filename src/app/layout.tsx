@@ -20,10 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${jakarta.className} antialiased`}>
-        {/* Header */}
+        {/* 💬: Header */}
         <Header />
         <div className="flex">
-          {/* Side Navigation */}
+          {/* 💬: Side Navigation */}
           <div className="hidden md:block">
             <SideNav />
           </div>

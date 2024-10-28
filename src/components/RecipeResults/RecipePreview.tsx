@@ -12,14 +12,14 @@ interface IRecipePreview {
 export default function RecipePreview({ recipe }: IRecipePreview) {
   return (
     <div className="flex flex-col border border-gray-200 rounded-md transition-shadow duration-300 ease-in-out hover:shadow-lg cursor-pointer group">
-      {/* Read More Button */}
+      {/* 💬: Read More Indicator */}
       <button className="p-2 py-2 text-sm font-medium flex items-center justify-start text-blue-500 bg-blue-50 group-hover:bg-blue-100 group-hover:text-blue-700 duration-300 ease-in-out transition-all">
         Discover Recipe
       </button>
 
-      {/* Main Content Container */}
+      {/* 💬: Main Content Container */}
       <div className="flex flex-col sm:flex-row pt-1">
-        {/* Thumbnail */}
+        {/* 💬: Recipe Thumbnail */}
         <div className="hidden md:block sm:w-[100px] w-full">
           <Image
             alt="An image of the recipe"
@@ -30,7 +30,7 @@ export default function RecipePreview({ recipe }: IRecipePreview) {
           />
         </div>
 
-        {/* Title & Badges Container */}
+        {/* 💬: Recipe Title & Badges Container */}
         <div className="flex-grow p-2">
           <h2 className="font-medium text-lg">{recipe.strMeal}</h2>
 
@@ -91,7 +91,7 @@ export default function RecipePreview({ recipe }: IRecipePreview) {
           </div>
         </div>
 
-        {/* Tags Container */}
+        {/* 💬: Recipe Tags Container */}
         {recipe.strTags && (
           <div className="hidden lg:flex lg:flex-col flex-row flex-wrap gap-2 p-2 justify-start h-fit">
             {recipe.strTags
@@ -111,7 +111,7 @@ export default function RecipePreview({ recipe }: IRecipePreview) {
         )}
       </div>
 
-      {/* Instructions */}
+      {/* 💬: Recipe Cooking Instructions */}
       <div className="flex flex-col">
         <div className="border-b pt-1 border-gray-200" />
         <div className="p-2 py-3 space-y-1">

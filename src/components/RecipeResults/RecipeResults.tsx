@@ -53,7 +53,7 @@ export default function RecipeResults({ selectedIngredient }: IRecipeResults) {
           })
         );
 
-        // 💬: Aggregating unique categories and areas
+        // 💬: Aggregate categories and areas
         const uniqueCategories = new Set<string>();
         const uniqueAreas = new Set<string>();
 
@@ -84,13 +84,13 @@ export default function RecipeResults({ selectedIngredient }: IRecipeResults) {
           <RecipePreviewSkeleton />
         </div>
       ) : recipes.length ? (
-        // Recipe & Filters
-        <div className="">
-          {/* Wrapper */}
+        // 💬: Recipe & Filters
+        <div>
+          {/* 💬: Wrapper */}
           <div className="p-1">
-            {/* Title */}
+            {/* 💬: Title */}
             <h4 className="text-sm text-slate-700 ml-0.5">Filter by</h4>
-            {/* Filters */}
+            {/* 💬: Filters */}
             <div className="gap-2 py-2 flex flex-row flex-wrap">
               <RecipeFilter filterCategory="Cuisine" filterData={areas} />
               <RecipeFilter
@@ -99,7 +99,7 @@ export default function RecipeResults({ selectedIngredient }: IRecipeResults) {
               />
             </div>
           </div>
-          {/* Recipe Previews */}
+          {/* 💬: Recipe Previews */}
           <div className="space-y-2">
             {recipes.map((recipe) => (
               <RecipePreview key={recipe.idMeal} recipe={recipe} />
