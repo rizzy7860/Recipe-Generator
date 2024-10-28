@@ -42,7 +42,7 @@ export default function SearchInput({
   );
 
   return (
-    <div className="flex flex-col relative w-full">
+    <div className="flex flex-col relative w-full z-40">
       {/* Search Input */}
       <input
         placeholder="Search for ingredients..."

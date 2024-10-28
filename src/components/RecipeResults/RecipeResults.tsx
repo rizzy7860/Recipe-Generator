@@ -4,6 +4,7 @@ import { IRecipeIngredients, IRecipe } from "@/models/interfacesTypes";
 import { useEffect, useState } from "react";
 import RecipePreview from "./RecipePreview";
 import RecipePreviewSkeleton from "./RecipePreviewSkeleton";
+import RecipeFilter from "../Filters/RecipeFilter";
 
 // SECTION: Interfaces and Types
 interface IRecipeResults {
@@ -16,6 +17,8 @@ export default function RecipeResults({ selectedIngredient }: IRecipeResults) {
   //
   const [isLoading, setIsLoading] = useState(true);
   const [recipes, setRecipes] = useState<IRecipe[]>([]);
+  const [categories, setCategories] = useState<string[]>([]);
+  const [areas, setAreas] = useState<string[]>([]);
 
   useEffect(() => {
     if (!selectedIngredient) return;
@@ -50,6 +53,17 @@ export default function RecipeResults({ selectedIngredient }: IRecipeResults) {
           })
         );
 
+        // 💬: Aggregating unique categories and areas
+        const uniqueCategories = new Set<string>();
+        const uniqueAreas = new Set<string>();
+
+        fullRecipes.forEach((recipe) => {
+          if (recipe.strCategory) uniqueCategories.add(recipe.strCategory);
+          if (recipe.strArea) uniqueAreas.add(recipe.strArea);
+        });
+
+        setCategories(Array.from(uniqueCategories));
+        setAreas(Array.from(uniqueAreas));
         setRecipes(fullRecipes);
       } catch (error) {
         console.error("Error fetching meal details:", error);
@@ -70,14 +84,31 @@ export default function RecipeResults({ selectedIngredient }: IRecipeResults) {
           <RecipePreviewSkeleton />
         </div>
       ) : recipes.length ? (
-        <div className="space-y-2">
-          {recipes.map((recipe) => (
-            <RecipePreview key={recipe.idMeal} recipe={recipe} />
-          ))}
+        // Recipe & Filters
+        <div className="">
+          {/* Wrapper */}
+          <div className="p-1">
+            {/* Title */}
+            <h4 className="text-sm text-slate-700 ml-0.5">Filter by</h4>
+            {/* Filters */}
+            <div className="gap-2 py-2 flex flex-row flex-wrap">
+              <RecipeFilter filterCategory="Cuisine" filterData={areas} />
+              <RecipeFilter
+                filterCategory="Recipe Type"
+                filterData={categories}
+              />
+            </div>
+          </div>
+          {/* Recipe Previews */}
+          <div className="space-y-2">
+            {recipes.map((recipe) => (
+              <RecipePreview key={recipe.idMeal} recipe={recipe} />
+            ))}
+          </div>
         </div>
       ) : (
         <p className="text-sm text-gray-700">
-          There were no recipes were found, please try another ingredient.
+          No recipes were found, please try another ingredient.
         </p>
       )}
     </div>

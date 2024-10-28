@@ -25,6 +25,18 @@ export const cookieIcon: React.ReactNode = (
   </svg>
 );
 
+export const chevronDown: React.ReactNode = (
+  <svg
+    stroke="currentColor"
+    fill="currentColor"
+    strokeWidth="0"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M5.22 8.22a.749.749 0 0 0 0 1.06l6.25 6.25a.749.749 0 0 0 1.06 0l6.25-6.25a.749.749 0 1 0-1.06-1.06L12 13.939 6.28 8.22a.749.749 0 0 0-1.06 0Z"></path>
+  </svg>
+);
+
 export const cookingPotIcon: React.ReactNode = (
   <svg
     stroke="currentColor"
@@ -56,6 +68,20 @@ export const dashboardIcon: React.ReactNode = (
 );
 
 // F
+export const filterIcon: React.ReactNode = (
+  <svg
+    stroke="currentColor"
+    fill="none"
+    strokeWidth="1"
+    viewBox="0 0 24 24"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M4 4h16v2.172a2 2 0 0 1 -.586 1.414l-4.414 4.414v7l-6 2v-8.5l-4.48 -4.928a2 2 0 0 1 -.52 -1.345v-2.227z"></path>
+  </svg>
+);
+
 export const foodBowlIcon: React.ReactNode = (
   <svg
     stroke="currentColor"
