@@ -32,7 +32,7 @@ export default function RecipePreview({ recipe }: IRecipePreview) {
 
         {/* 💬: Recipe Title & Badges Container */}
         <div className="flex-grow p-2">
-          <h2 className="font-medium text-lg">{recipe.strMeal}</h2>
+          <h2 className="font-medium text-lg capitalize">{recipe.strMeal}</h2>
 
           {/* Badges Container */}
           <div className="flex flex-wrap gap-2 mt-2">
