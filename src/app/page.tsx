@@ -33,7 +33,7 @@ export default async function Home() {
   const ingredients = await getAllIngredients();
   //
   return (
-    <div className="h-full grid grid-cols-4 lg:grid-cols-5">
+    <div className="grid grid-cols-4 lg:grid-cols-5">
       {/* 💬: Recipe Preview Section */}
       <div className="col-span-4 lg:col-span-2 p-3">
         {/* 💬: Page title and functionality description */}
@@ -45,12 +45,12 @@ export default async function Home() {
           </p>
         </div>
         {/* 💬: Search Input: parent component to the SearchInput and MealResults components, created for the purposes of lifting state from SearchInput (the selected ingredient specifically) to be used in MealResults */}
-        <div className="px-2">
+        <div className="px-2 select-none">
           <RecipeSelector ingredients={ingredients} />
         </div>
       </div>
       {/* 💬: Full Recipe Display */}
-      <div className="col-span-3 col-start-3 lg:border-l lg:border-gray-200">
+      <div className="col-span-3 col-start-3 h-screen">
         <FullRecipe />
       </div>
     </div>

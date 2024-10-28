@@ -24,10 +24,10 @@ export default function RecipeSelector({ ingredients }: IRecipeSelectorProps) {
           setSelectedIngredient={setSelectedIngredient}
         />
         {/* Divider */}
-        <div className="border-b border-gray-300 w-full" />
+        <div className="border-b border-gray-200 w-full" />
       </div>
       {/* Search Results */}
-      <div>
+      <div className="">
         {/* Recipe Results */}
         {selectedIngredient && (
           <RecipeResults selectedIngredient={selectedIngredient} />

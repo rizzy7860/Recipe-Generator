@@ -76,7 +76,7 @@ export default function RecipeResults({ selectedIngredient }: IRecipeResults) {
   }, [selectedIngredient]);
   //
   return (
-    <div>
+    <div className="">
       {isLoading ? (
         <div className="space-y-2">
           <RecipePreviewSkeleton />

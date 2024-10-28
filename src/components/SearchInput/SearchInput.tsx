@@ -46,7 +46,7 @@ export default function SearchInput({
       <div className="relative w-full">
         {/* Search Input */}
         <input
-          placeholder="Search for recipes by main ingredient..."
+          placeholder="Search for recipes by main ingredient"
           type="search"
           value={searchText}
           onChange={handleInputChange}

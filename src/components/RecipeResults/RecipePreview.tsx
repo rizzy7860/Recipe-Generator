@@ -93,7 +93,7 @@ export default function RecipePreview({ recipe }: IRecipePreview) {
 
         {/* Tags Container */}
         {recipe.strTags && (
-          <div className="hidden md:flex lg:flex-col flex-row flex-wrap gap-2 p-2 justify-start h-fit">
+          <div className="hidden lg:flex lg:flex-col flex-row flex-wrap gap-2 p-2 justify-start h-fit">
             {recipe.strTags
               .split(",")
               .filter((tag) => tag.trim() !== "")
