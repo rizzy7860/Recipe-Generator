@@ -43,20 +43,20 @@ export default function SearchInput({
 
   return (
     <div className="flex flex-col relative w-full z-40">
-      {/* Search Input */}
-      <input
-        placeholder="Search for ingredients..."
-        type="search"
-        value={searchText}
-        onChange={handleInputChange}
-        className="border-[1px] w-full border-[#98A2B3] flex items-center justify-center placeholder:text-[#98A2B3] pr-12 p-3 placeholder:text-sm rounded-md focus:outline-none focus:ring-blue-300 focus:ring-1 h-10 capitalize"
-      />
-      {/* Search Button */}
-      <button className="absolute bottom-0 right-0 h-full px-2.5 rounded-r-md bg-blue-400 group-focus-within:bg-blue-600 transition-all ease-in duration-400">
-        <span className="flex items-center justify-center h-5 w-5 text-[#f4f4f4]">
+      <div className="relative w-full">
+        {/* Search Input */}
+        <input
+          placeholder="Search for recipes by main ingredient..."
+          type="search"
+          value={searchText}
+          onChange={handleInputChange}
+          className="border-[1px] w-full border-[#98A2B3] pl-10 placeholder:text-[#98A2B3] p-3 placeholder:text-sm rounded-md focus:outline-none focus:ring-blue-300 focus:ring-1 h-10"
+        />
+        {/* Search icon positioned absolutely inside the input */}
+        <span className="absolute left-2 top-1/2 transform -translate-y-1/2 flex items-center justify-center h-5 w-5 text-[#98A2B3]">
           {searchIcon}
         </span>
-      </button>
+      </div>
 
       {/* 💬: Suggestions List */}
       {showSuggestions && searchText && (
