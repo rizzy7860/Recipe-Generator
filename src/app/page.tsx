@@ -33,9 +33,9 @@ export default async function Home() {
   const ingredients = await getAllIngredients();
   //
   return (
-    <div className="h-full grid grid-cols-5">
+    <div className="h-full grid grid-cols-4 lg:grid-cols-5">
       {/* 💬: Recipe Preview Section */}
-      <div className="col-span-2 p-3">
+      <div className="col-span-4 lg:col-span-2 p-3">
         {/* 💬: Page title and functionality description */}
         <div className="flex flex-col justify-center p-3 gap-2">
           <h1 className="text-2xl font-semibold">{`What's in your pantry?`}</h1>

@@ -12,23 +12,30 @@ interface IRecipePreview {
 export default function RecipePreview({ recipe }: IRecipePreview) {
   return (
     <div className="flex flex-col border border-gray-200 rounded-md transition-shadow duration-300 ease-in-out hover:shadow-lg cursor-pointer group">
-      {/* Read More */}
-      <button className="p-2 py-2 text-sm font-medium flex items-center justify-start text-blue-500 bg-blue-50 group-hover:bg-blue-100 group-hover:text-blue-700 duration-300 ease-in-out transition-all rounded-t-md">
+      {/* Read More Button */}
+      <button className="p-2 py-2 text-sm font-medium flex items-center justify-start text-blue-500 bg-blue-50 group-hover:bg-blue-100 group-hover:text-blue-700 duration-300 ease-in-out transition-all">
         Discover Recipe
       </button>
-      <div className="flex pt-1">
-        {/* Thumbnail of Recipe */}
-        <Image
-          alt="An image of the recipe"
-          className="rounded-lg p-1 object-cover"
-          src={recipe.strMealThumb}
-          height={100}
-          width={100}
-        />
-        {/* Title & Badges */}
-        <div className="flex flex-col justify-center gap-1 flex-grow p-2 flex-wrap">
+
+      {/* Main Content Container */}
+      <div className="flex flex-col sm:flex-row pt-1">
+        {/* Thumbnail */}
+        <div className="hidden md:block sm:w-[100px] w-full">
+          <Image
+            alt="An image of the recipe"
+            className="rounded-lg p-1 object-cover w-full h-[200px] sm:h-[100px]"
+            src={recipe.strMealThumb}
+            height={100}
+            width={100}
+          />
+        </div>
+
+        {/* Title & Badges Container */}
+        <div className="flex-grow p-2">
           <h2 className="font-medium text-lg">{recipe.strMeal}</h2>
-          <div className="flex gap-2 mt-2">
+
+          {/* Badges Container */}
+          <div className="flex flex-wrap gap-2 mt-2">
             {/* Cuisine Type Badge - Area */}
             {recipe.strArea !== "Unknown" && (
               <div className="bg-gray-200 border border-gray-400 rounded-lg flex items-center justify-center flex-row p-1">
@@ -42,7 +49,8 @@ export default function RecipePreview({ recipe }: IRecipePreview) {
                 <p className="text-sm px-2 font-light">{recipe.strArea}</p>
               </div>
             )}
-            {/* Cuisine Category Badge - Categories */}
+
+            {/* Category Badge */}
             <div
               className={cn(
                 "rounded-lg flex items-center justify-center flex-row p-1",
@@ -82,36 +90,30 @@ export default function RecipePreview({ recipe }: IRecipePreview) {
             </div>
           </div>
         </div>
-        {/* Recipe Tags */}
+
+        {/* Tags Container */}
         {recipe.strTags && (
-          <div className="flex flex-col gap-2 p-2 justify-start">
-            {/* Split the strTags string into an array, filter out empty strings, and slice the first 3 elements */}
+          <div className="hidden md:flex lg:flex-col flex-row flex-wrap gap-2 p-2 justify-start h-fit">
             {recipe.strTags
               .split(",")
-              .filter((tag) => tag.trim() !== "") // Filter out empty strings
+              .filter((tag) => tag.trim() !== "")
               .slice(0, 3)
-              .map((tag, index) => {
-                return (
-                  <div
-                    key={index}
-                    className="bg-slate-100 border border-slate-300 text-xs py-1 px-2 rounded-md w-fit flex flex-row items-center justify-center gap-2 capitalize"
-                  >
-                    {/* Tag Icon */}
-                    <span className="h-3 w-3 text-slate-600">{tagIcon}</span>
-                    {/* Tag */}
-                    <span className="text-xs text-slate-600">{tag}</span>
-                  </div>
-                );
-              })}
+              .map((tag, index) => (
+                <div
+                  key={index}
+                  className="bg-slate-100 border border-slate-300 text-xs py-1 px-2 rounded-md w-fit flex flex-row items-center justify-center gap-2 capitalize"
+                >
+                  <span className="h-3 w-3 text-slate-600">{tagIcon}</span>
+                  <span className="text-xs text-slate-600">{tag}</span>
+                </div>
+              ))}
           </div>
         )}
       </div>
 
-      {/* Required Ingredients & Instructions */}
+      {/* Instructions */}
       <div className="flex flex-col">
-        {/* Divider */}
         <div className="border-b pt-1 border-gray-200" />
-        {/* Instructions */}
         <div className="p-2 py-3 space-y-1">
           <p>Cooking Instructions</p>
           <p className="text-gray-600 line-clamp-2 text-sm leading-loose">
